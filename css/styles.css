@@ -1,0 +1,231 @@
+/* GLOBAL RESEST */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+ul {
+  list-style: none;
+}
+
+/* IMPORTS */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap");
+
+/* VARIABLES */
+:root {
+  --violet-accent-overlay: hsla(277, 100%, 50%, 0.3);
+
+  --violet-accent: hsl(277, 64%, 61%);
+  --purple-card-bg: hsl(244, 38%, 16%);
+  --purple-bg: hsl(233, 47%, 7%);
+
+  --white-heading: hsl(0, 0%, 100%);
+  --white-paragraph: hsla(0, 0%, 100%, 0.75);
+  --white-stats: hsla(0, 0%, 100%, 0.6);
+
+  --font-size-h1: 3.5rem;
+  --font-size-subheading: 2.8rem;
+  --font-size-p: 1.5rem;
+  --font-size-p-alt: 1.4rem;
+
+  --inter: "Inter", sans-serif;
+  --lexend: "Lexend Deca", sans-serif;
+
+  --font-weight-h: 700;
+  --font-weight-p: 400;
+
+  --line-height-h: 1.2;
+  --lineheight-p: 1.7;
+
+  --border-radious-default: 8px;
+}
+
+/* GENERAL / REUSABLE CLASSES */
+.flex {
+  display: flex;
+}
+
+.flex-vertical {
+  display: flex;
+  flex-direction: column;
+}
+
+/* START APPLYING */
+body {
+  background-color: var(--purple-bg);
+  font-family: var(--inter);
+}
+
+.violet-text {
+  color: var(--violet-accent);
+}
+
+.container {
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 0 5%;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  padding-top: 3.2rem;
+  padding-bottom: 3.2rem;
+}
+
+.card {
+  border-radius: var(--border-radious-default);
+  overflow: hidden;
+}
+
+.img-box {
+  width: 115%;
+  overflow: hidden;
+  position: relative;
+}
+.hero-img {
+  width: 100%;
+  height: 100%;
+  transform: scale(1.02);
+  filter: brightness(80%);
+  object-fit: cover;
+}
+.overlay {
+  background-color: var(--violet-accent-overlay);
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 3;
+}
+
+.card {
+  background-color: var(--purple-card-bg);
+}
+
+.textarea {
+  padding: 6rem 8rem;
+}
+
+.h1,
+.h3 {
+  color: var(--white-heading);
+  font-weight: var(--font-weight-h);
+}
+
+.h1 {
+  font-size: var(--font-size-h1);
+  line-height: var(--line-height-h);
+  margin-bottom: 2.8rem;
+}
+
+.h3 {
+  font-size: var(--font-size-subheading);
+  text-transform: uppercase;
+}
+
+.p {
+  font-weight: var(--font-weight-p);
+  font-size: var(--font-size-p);
+  color: var(--white-paragraph);
+  line-height: var(--lineheight-p);
+  width: 92%;
+}
+
+.flexing {
+  margin-top: auto;
+  gap: 5.2rem;
+}
+
+.p-alt {
+  font-family: var(--lexend);
+  font-weight: var(--font-weight-p);
+  font-size: var(--font-size-p-alt);
+  color: var(--white-stats);
+  font-family: var(--lexend);
+  text-transform: uppercase;
+}
+
+.status-pair {
+  gap: 0.8rem;
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 69.5em) {
+  html {
+    font-size: 56.25%;
+  }
+}
+
+@media (max-width: 63.125em) {
+  .flexing {
+    margin-top: 20%;
+  }
+}
+
+@media (max-width: 60em) {
+  .textarea {
+    padding-left: 6rem;
+    padding-right: 6rem;
+  }
+  .p {
+    width: 95%;
+  }
+}
+
+@media (max-width: 53em) {
+  html {
+    font-size: 54%;
+  }
+  :root {
+    --font-size-h1: 3.4rem;
+  }
+}
+
+@media (max-width: 47.125em) {
+  .p {
+    width: 100%;
+  }
+  .container {
+    height: auto;
+    padding: 0 5%;
+  }
+  body {
+    padding: 8rem 0;
+    padding-bottom: 9.6rem;
+  }
+  .card {
+    flex-direction: column-reverse;
+  }
+  .textarea {
+    padding: 6rem 10%;
+    text-align: center;
+  }
+  .flexing {
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  :root {
+    --font-size-h1: 3.5rem;
+    --font-size-p: 1.8rem;
+    --font-size-p-alt: 1.6rem;
+  }
+}
+
+@media (max-width: 30.25em) {
+  .textarea {
+    padding-left: 8%;
+    padding-right: 8%;
+  }
+}
