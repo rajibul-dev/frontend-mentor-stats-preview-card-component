@@ -74,12 +74,9 @@ body {
 .container {
   max-width: 120rem;
   margin: 0 auto;
-  padding: 0 5%;
-  height: 100vh;
+  padding: 12.8rem 5%;
   align-items: center;
   justify-content: center;
-  padding-top: 3.2rem;
-  padding-bottom: 3.2rem;
 }
 
 .card {
