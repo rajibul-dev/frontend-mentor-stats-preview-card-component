@@ -65,6 +65,10 @@ ul {
 body {
   background-color: var(--purple-bg);
   font-family: var(--inter);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
 }
 
 .violet-text {
@@ -74,7 +78,7 @@ body {
 .container {
   max-width: 120rem;
   margin: 0 auto;
-  padding: 12.8rem 5%;
+  padding: 0 5%;
   align-items: center;
   justify-content: center;
 }
@@ -158,6 +162,15 @@ body {
 }
 
 /* MEDIA QUERIES */
+
+@media (max-height: 28.625em) {
+  body {
+    height: auto;
+    padding-top: 4.8rem;
+    padding-bottom: 4.8rem;
+  }
+}
+
 @media (max-width: 69.5em) {
   html {
     font-size: 56.25%;
@@ -190,11 +203,15 @@ body {
 }
 
 @media (max-width: 47.125em) {
+  body {
+    height: auto;
+    padding-top: 3.2rem;
+    padding-bottom: 8rem;
+  }
   .p {
     width: 100%;
   }
   .container {
-    height: auto;
     padding: 0 5%;
   }
   body {
